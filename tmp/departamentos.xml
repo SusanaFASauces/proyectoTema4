@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<departamentos>
+  <departamento>
+    <codDepartamento>ART</codDepartamento>
+    <descDepartamento>Departamento de arte</descDepartamento>
+    <fechaBaja/>
+    <volumenNegocio>7</volumenNegocio>
+  </departamento>
+  <departamento>
+    <codDepartamento>COC</codDepartamento>
+    <descDepartamento>Departamento de cocina</descDepartamento>
+    <fechaBaja/>
+    <volumenNegocio>4</volumenNegocio>
+  </departamento>
+  <departamento>
+    <codDepartamento>CON</codDepartamento>
+    <descDepartamento>Departamento de contabilidad</descDepartamento>
+    <fechaBaja/>
+    <volumenNegocio>3</volumenNegocio>
+  </departamento>
+  <departamento>
+    <codDepartamento>FIN</codDepartamento>
+    <descDepartamento>Departamento de finanzas</descDepartamento>
+    <fechaBaja/>
+    <volumenNegocio>7</volumenNegocio>
+  </departamento>
+  <departamento>
+    <codDepartamento>INF</codDepartamento>
+    <descDepartamento>Departamento de informatica</descDepartamento>
+    <fechaBaja/>
+    <volumenNegocio>1</volumenNegocio>
+  </departamento>
+  <departamento>
+    <codDepartamento>LIM</codDepartamento>
+    <descDepartamento>Departamento de limpieza</descDepartamento>
+    <fechaBaja/>
+    <volumenNegocio>3</volumenNegocio>
+  </departamento>
+  <departamento>
+    <codDepartamento>MAT</codDepartamento>
+    <descDepartamento>Departamento de matematicas</descDepartamento>
+    <fechaBaja/>
+    <volumenNegocio>6</volumenNegocio>
+  </departamento>
+  <departamento>
+    <codDepartamento>MEC</codDepartamento>
+    <descDepartamento>Departamento de mecanica</descDepartamento>
+    <fechaBaja/>
+    <volumenNegocio>5</volumenNegocio>
+  </departamento>
+  <departamento>
+    <codDepartamento>PUB</codDepartamento>
+    <descDepartamento>Departamento de publicidad</descDepartamento>
+    <fechaBaja/>
+    <volumenNegocio>5</volumenNegocio>
+  </departamento>
+  <departamento>
+    <codDepartamento>TEC</codDepartamento>
+    <descDepartamento>Departamento de tecnología</descDepartamento>
+    <fechaBaja/>
+    <volumenNegocio>6</volumenNegocio>
+  </departamento>
+  <departamento>
+    <codDepartamento>VEN</codDepartamento>
+    <descDepartamento>Departamento de ventas</descDepartamento>
+    <fechaBaja/>
+    <volumenNegocio>2</volumenNegocio>
+  </departamento>
+</departamentos>
