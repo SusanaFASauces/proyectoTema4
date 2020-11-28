@@ -1,7 +1,7 @@
 /* 
     Autor.- Susana Fabián Antón
     Fecha creación.- 30/09/2020
-    Última modificación.- 30/09/2020
+    Última modificación.- 26/11/2020
 */
 /*
     Colores:
@@ -78,6 +78,7 @@ p {
 footer {
     margin: 10px auto;
     padding: 5px;
+    position: relative;
     text-align: center;
     width: 80%;
     
@@ -88,18 +89,37 @@ footer {
 footer address {
     margin: 10px 5px;
 }
+.iconos-dcha {
+    position: absolute;
+    top: 15px;
+    right: 25px;  
+}
+.iconos-izq {
+    position: absolute;
+    top: 15px;
+    left: 35px;  
+}
+footer img {
+    width: 45px;
+}
 
 /* Reglas de estilo de tablas */
-table {
+.tabla {
     width: 100%;
+    border: none;
+    border-collapse: separate;
+    box-shadow: none;
 }
-tr:nth-child(even) {
+.tabla tr:nth-child(even) {
     background-color: #C9D7DF;
 }
-th, td {
+.tabla th, .tabla td {
+    font-size: initial;
+    border: none;
+    position: initial;
     padding: 10px 20px;
 }
-td img {
+.tabla td img {
     display: block;
     margin: auto;
 }

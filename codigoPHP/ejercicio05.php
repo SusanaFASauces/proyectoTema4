@@ -27,7 +27,7 @@
                         /**
                          * @author Susana Fabián Antón
                          * @since 11/11/2020
-                         * @version 16/11/2020
+                         * @version 28/11/2020
                          */
                         require_once '../config/confDBPDO.php'; //fichero que contiene las constantes de configuración
                         
@@ -42,13 +42,18 @@
                                 (:codDepartamento, :descDepartamento, :volumenNegocio)
 CONSULTA;
                             $insert = $miDB->prepare($consulta); //objeto de la clase PDOStatement que contiene una consulta preparada que le hacemos a la base de datos
-                            $aParametros = [ //array que utilizaremos para bindear los parámetros de la consulta preparada
+                            $aDepartamentos = [ //array que contiene información de los departamentos que vamos a añadir a nuestra base de datos
                                 ["codDepartamento" => "QUI", "descDepartamento" => "Departamento de química", "volumenNegocio" => 9],
                                 ["codDepartamento" => "MUS", "descDepartamento" => "Departamento de música", "volumenNegocio" => 3],
                                 ["codDepartamento" => "ELE", "descDepartamento" => "Departamento de electricidad", "volumenNegocio" => 12]
                             ];
-                            foreach($aParametros as $parametro) { //recorremos el array de departamentos
-                                $insert->execute($parametro); //ejecutamos la consulta
+                            foreach($aDepartamentos as $departamento) { //recorremos el array de departamentos
+                                $parametros = [ //array que utilizaremos para bindear los parámetros de la consulta preparada
+                                    ":codDepartamento" => $departamento["codDepartamento"],
+                                    ":descDepartamento" => $departamento["descDepartamento"],
+                                    ":volumenNegocio" => $departamento["volumenNegocio"]
+                                ];
+                                $insert->execute($parametros); //ejecutamos la consulta
                             }
                             $miDB->commit(); //confirmamos la transacción
                             echo "<p style=color:green>Los resgistros se han insertado en la tabla Departamento con éxito</p>"; //mostramos un mensaje indicando que todo ha ido bien
@@ -108,7 +113,7 @@ CONSULTA;
         </main>
         <footer>
             <address>Contacta conmigo en: susana.fabant@educa.jcyl.es</address>
-            <p>- 16 de Noviembre 2020 -</p>
+            <p>- 28 de Noviembre 2020 -</p>
         </footer>
     </body>
 </html>

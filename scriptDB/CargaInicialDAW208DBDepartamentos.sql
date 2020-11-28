@@ -5,7 +5,7 @@
 -- utilizamos de la base de datos
 USE DAW208DBDepartamentos;
 
--- insertamos datos en la tabla 'Departamento'
+-- insertamos datos en la tabla Departamento
 INSERT INTO Departamento(CodDepartamento,DescDepartamento,FechaBaja,VolumenNegocio) VALUES
 ('INF','Departamento de informatica',null,1),
 ('VEN','Departamento de ventas',null,2),

@@ -31,7 +31,7 @@
                             
                             $select = $miDB->query("SELECT * FROM Departamento"); //objeto de la clase PDOStatement que contiene una consulta que le hacemos a la base de datos                            
                     ?>
-                    <table>
+                    <table class="tabla">
                         <tr>
                             <th>CodDepartamento</th>
                             <th>DescDepartamento</th>

@@ -29,7 +29,7 @@
                         /**
                          * @author Susana Fabián Antón
                          * @since 11/11/2020
-                         * @version 17/11/2020
+                         * @version 26/11/2020
                          */
                         require_once '../config/confDBPDO.php'; //fichero que contiene las constantes de configuración
                         
@@ -43,14 +43,20 @@
                                 (:codDepartamento, :descDepartamento, :volumenNegocio)
 CONSULTA;
                             $insert = $miDB->prepare($consulta); //objeto de la clase PDOStatement que contiene una consulta preparada que le hacemos a la base de datos
-                            $aDepartamentosNuevos = [ //array bidimiensional que información de los departamentos nuevos que vamos a añadir a nuestra base de datos
+                            $aDepartamentosNuevos = [ //array bidimiensional que contiene información de los departamentos nuevos que vamos a añadir a nuestra base de datos
                                 ["codDepartamento" => "TEC", "descDepartamento" => "Departamento de tecnología", "volumenNegocio" => 6], //arrays que utilizaremos para bindear los parámetros de la consulta preparada
                                 ["codDepartamento" => "LIM", "descDepartamento" => "Departamento de limpieza", "volumenNegocio" => 3],
-                                ["codDepartamento" => "ART", "descDepartamento" => "Departamento de arte", ":volumenNegocio" => 7]
+                                ["codDepartamento" => "ART", "descDepartamento" => "Departamento de arte", "volumenNegocio" => 7]
                             ];
+                            
                             $numRegistros = 0; //contador de registros que se han insertado correctamente en la tabla
-                            foreach($aDepartamentosNuevos as $parametro) { //recorremos el array de departamentos
-                                $insert->execute($parametro); //ejecutamos la consulta
+                            foreach($aDepartamentosNuevos as $departamento) { //recorremos el array de departamentos
+                                $parametros = [ //array que utilizaremos para bindear los parámetros de la consulta preparada
+                                    ":codDepartamento" => $departamento["codDepartamento"],
+                                    ":descDepartamento" => $departamento["descDepartamento"],
+                                    ":volumenNegocio" => $departamento["volumenNegocio"]
+                                ];
+                                $insert->execute($parametros); //ejecutamos la consulta
                                 $numRegistros++;
                             }
                             echo "<p style=color:green>Los resgistros se han insertado en la tabla Departamento con éxito</p>"; //mostramos un mensaje indicando que todo ha ido bien
@@ -85,12 +91,17 @@ CONSULTA;
                             $aDepartamentosNuevos = [ //array bidimiensional que información de los departamentos nuevos que vamos a añadir a nuestra base de datos
                                 ["codDepartamento" => "PUB", "descDepartamento" => "Departamento de publicidad", "volumenNegocio" => 5], //arrays que utilizaremos para bindear los parámetros de la consulta preparada
                                 ["codDepartamento" => "FIN", "descDepartamento" => "Departamento de finanzas", "volumenNegocio" => 7],
-                                ["codDepartamento" => "ART", "descDepartamento" => "Departamento de arte", ":volumenNegocio" => 7]
+                                ["codDepartamento" => "ART", "descDepartamento" => "Departamento de arte", "volumenNegocio" => 7]
                             ];
                             
                             $numRegistros = 0; //contador de registros que se han insertado correctamente en la tabla
-                            foreach($aDepartamentosNuevos as $parametro) { //recorremos el array de departamentos
-                                $insert->execute($parametro); //ejecutamos la consulta
+                            foreach($aDepartamentosNuevos as $departamento) { //recorremos el array de departamentos
+                                $parametros = [ //array que utilizaremos para bindear los parámetros de la consulta preparada
+                                    ":codDepartamento" => $departamento["codDepartamento"],
+                                    ":descDepartamento" => $departamento["descDepartamento"],
+                                    ":volumenNegocio" => $departamento["volumenNegocio"]
+                                ];
+                                $insert->execute($parametros); //ejecutamos la consulta
                                 $numRegistros++;
                             }
                             echo "<p style=color:green>Los resgistros se han insertado en la tabla Departamento con éxito.</p>"; //mostramos un mensaje indicando que todo ha ido bien
@@ -109,7 +120,7 @@ CONSULTA;
         </main>
         <footer>
             <address>Contacta conmigo en: susana.fabant@educa.jcyl.es</address>
-            <p>- 17 de Noviembre 2020 -</p>
+            <p>- 26 de Noviembre 2020 -</p>
         </footer>
     </body>
 </html>

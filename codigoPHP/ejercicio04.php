@@ -64,7 +64,7 @@
                                 
                                 if($select->rowCount()>0){ //si se han encontrado registros
                     ?>
-                    <table>
+                    <table class="tabla">
                         <tr>
                             <th>CodDepartamento</th>
                             <th>DescDepartamento</th>

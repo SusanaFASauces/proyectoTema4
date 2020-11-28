@@ -8,18 +8,18 @@
     //CONSTANTES PARA LA EXTENSIÓN MYSQLI
 
     //constantes servidor casa
-//    define('HOST', '192.168.0.122'); 
+//    define('HOST', '192.168.31.208'); 
 //    define('DBNAME', 'DAW208DBDepartamentos');
 //    define('USER', 'usuarioDAW208DBDepartamentos');
 //    define('PASSWORD', 'P@ssw0rd');
 //    define('PORT', '3306');
     
     //constantes entorno desarrollo
-//    define('HOST', '192.168.20.19'); 
-//    define('DBNAME', 'DAW208DBDepartamentos');
-//    define('USER', 'usuarioDAW208DBDepartamentos');
-//    define('PASSWORD', 'paso');
-//    define('PORT', '3306');
+    define('HOST', '192.168.20.19'); 
+    define('DBNAME', 'DAW208DBDepartamentos');
+    define('USER', 'usuarioDAW208DBDepartamentos');
+    define('PASSWORD', 'paso');
+    define('PORT', '3306');
     
     //constantes entorno explotación
 //    define('HOST', '192.168.20.18'); 
